@@ -41,7 +41,7 @@ if(isset($_SESSION['id'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="img/logo.png"/>
-	<title>Login</title>
+	<title>Login ASBank</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
   <script type="text/javascript" src="js/sweetalert-dev.js"></script>
