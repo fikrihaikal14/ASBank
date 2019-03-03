@@ -10,7 +10,7 @@ if(isset($_SESSION['id'])) {
 	if (isset($_POST['login'])) {
 		$id = ($_POST['id']);
 		$password = md5($_POST['password']);
-		$login=mysqli_query($koneksi,"SELECT * FROM tb_admin WHERE id_admin='$id' AND password='$password'") or die(mysqli_error());
+		$login=mysqli_query($koneksi,"SELECT * FROM tb_admin WHERE id_admin='$id' AND password='$password'") or die(mysqli_error($koneksi));
 		$ketemu=mysqli_num_rows($login);
 		$r=mysqli_fetch_array($login);
 		$namaadm=$r['nama'];
@@ -23,7 +23,7 @@ if(isset($_SESSION['id'])) {
 			      (id_aktifis, id_admin, keterangan)
 			        VALUES
 			      ('$nilaikodemax','$namaadm($id)','admin $id($nama) Login')")
-			      or die(mysqli_error());
+			      or die(mysqli_error($koneksi));
 		}
 		else{
 			echo "<script> alert ('ID dan Password Salah'); document.location.href='login' ;</script>";
