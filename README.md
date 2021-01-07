@@ -1,2 +1,2 @@
 # ASBank
-Aplikasi ini untuk mengelola keuangan
+ASBank for student money savings
